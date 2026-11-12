@@ -530,8 +530,8 @@ async function handleGetLeaderboard(request, env) {
       name: student ? student.display_name : "Unknown",
       class: student ? student.class : "",
       score: Number(g.score),
-      gameId,
-    });
+      gameId
+    };
   });
 
   // User rank
