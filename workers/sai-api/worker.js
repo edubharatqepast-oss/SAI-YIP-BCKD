@@ -299,7 +299,8 @@ async function handleLogout(request, env) {
     const students = await sheetsGet(env, SHEET_STUDENTS);
     const sessions = await sheetsGet(env, SHEET_SESSIONS);
     if (sessions) {
-      const session = sessions.find(s => s.token_hash === await hashString(token));
+      const tokenHash = await hashString(token);
+      const session = sessions.find(s => s.token_hash === tokenHash);
       if (session) {
         // In a real impl, we'd update the row; for now just leave it
       }
