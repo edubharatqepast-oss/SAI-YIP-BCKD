@@ -2,12 +2,6 @@ name = "sai-yip-api"
 main = "workers/sai-api/worker.js"
 compatibility_date = "2026-11-12"
 
-# Cloudflare KV — cached question batches, session tokens, rate limiting
-[[kv_namespaces]]
-binding = "SAI_KV"
-id = ""
-preview_id = ""
-
 # Cloudflare Workers AI — question generation
 [ai]
 binding = "AI"
@@ -18,7 +12,7 @@ crons = ["0 3 * * 1"]
 
 # Public config (committed to repo, visible in dashboard)
 [vars]
-SHEET_ID = ""
+SHEET_ID = "1lcxrQvlrkJ93cPTavBqhcoxzO9twGmwA8sSQSu_blEg"
 CORS_ORIGIN = "https://sai-yip.pages.dev"
 APP_ENV = "development"
 
